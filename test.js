@@ -291,6 +291,8 @@ function test() {
   testFunc(filterLongWords, ["banana"], ["apple", "banana", "kiwi", "grape"]);
   testFunc(filterLongWords, [], ["apple", "kiwi"]);
 
+  testFunc(filterAdults, [{name: "Bob", age: 35}], [{name: "Alice", age: 25}, {name: "Bob", age: 35}]);
+  testFunc(filterAdults, [], [{name: "Alice", age: 25}]);
   console.table(testLog);
 }
 
