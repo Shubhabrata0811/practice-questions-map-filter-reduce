@@ -284,8 +284,12 @@ const testFunc = function (func, expected, ...args) {
 };
 
 function test() {
+
   testFunc(filterEvenNumbers, [2, 4], [1, 2, 3, 4, 5]);
   testFunc(filterEvenNumbers, [], [1, 3, 5]);
+
+  testFunc(filterLongWords, ["banana"], ["apple", "banana", "kiwi", "grape"]);
+  testFunc(filterLongWords, [], ["apple", "kiwi"]);
 
   console.table(testLog);
 }
