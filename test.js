@@ -297,6 +297,15 @@ function test() {
   testFunc(filterActiveUsers, [{username: "alice", active: true}], [{username: "alice", active: true}, {username: "bob", active: false}]);
   testFunc(filterActiveUsers, [], [{ username: "bob", active: false }]);
 
+  testFunc(filterNumbersGreaterThanTen, [12, 18], [5, 12, 7, 18, 3]);
+  testFunc(filterNumbersGreaterThanTen, [12, 18], [12, 18]);
+  testFunc(filterNumbersGreaterThanTen, [], [5, 7, 3]);
+
+
+  testFunc(filterLongBooks, [{title: "Book 2", pages: 250}], [{title: "Book 1", pages: 150}, {title: "Book 2", pages: 250}]);
+  testFunc(filterLongBooks, [], [{title: "Book 1", pages: 150}]);
+
+
 
   console.table(testLog);
 }
