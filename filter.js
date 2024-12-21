@@ -1,5 +1,7 @@
 // even numbers [1, 2, 3, 4, 5] => [2, 4]
-const filterEvenNumbers = function (numbers) {};
+const filterEvenNumbers = function (numbers) {
+  return numbers.filter((num) => num % 2 === 0 && num > 0);
+};
 
 // words with more than 5 letters ["apple", "banana", "kiwi", "grape"] => ["banana"]
 const filterLongWords = function (words) {};

@@ -269,17 +269,24 @@ const {
 
 const testLog = [];
 
-const testFunc = function (func, expected,...args){
-  const result = func(args[0])
+const testFunc = function (func, expected, ...args) {
+  const result = func(args[0]);
   const resultStr = "" + result;
   const expectedStr = "" + expected;
   const visual = resultStr === expectedStr ? "✅" : "❌";
-  testLog.push({"Function" : func.name, "Args" : args.join(" | "), "Result" : result, "Expected" : expected, "Visual": visual});
-}
+  testLog.push({
+    Function: func.name,
+    Args: args.join(" | "),
+    Result: result,
+    Expected: expected,
+    Visual: visual,
+  });
+};
 
-function test(){
+function test() {
+  testFunc(filterEvenNumbers, [2, 4], [1, 2, 3, 4, 5]);
+  testFunc(filterEvenNumbers, [], [1, 3, 5]);
 
-  
   console.table(testLog);
 }
 
