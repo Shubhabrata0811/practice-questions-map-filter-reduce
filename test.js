@@ -293,6 +293,11 @@ function test() {
 
   testFunc(filterAdults, [{name: "Bob", age: 35}], [{name: "Alice", age: 25}, {name: "Bob", age: 35}]);
   testFunc(filterAdults, [], [{name: "Alice", age: 25}]);
+
+  testFunc(filterActiveUsers, [{username: "alice", active: true}], [{username: "alice", active: true}, {username: "bob", active: false}]);
+  testFunc(filterActiveUsers, [], [{ username: "bob", active: false }]);
+
+
   console.table(testLog);
 }
 
