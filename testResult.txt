@@ -39,4 +39,5 @@
 │    35 │ "doubleLettersOf"             │ ",ccaatt"                         │ ",ccccaaaatttt"                                    │ ",ccccaaaatttt"                                    │ "✅"    │
 │    36 │ "negatedBooleansOf"           │ "true,false,true"                 │ "false,true,false"                                 │ "false,true,false"                                 │ "✅"    │
 │    37 │ "charCodesOf"                 │ "a,b,c"                           │ "97,98,99"                                         │ "97,98,99"                                         │ "✅"    │
+│    38 │ "domainNamesOf"               │ "user1@gmail.com,admin@yahoo.com" │ "gmail.com,yahoo.com"                              │ "gmail.com,yahoo.com"                              │ "✅"    │
 └───────┴───────────────────────────────┴───────────────────────────────────┴────────────────────────────────────────────────────┴────────────────────────────────────────────────────┴────────┘

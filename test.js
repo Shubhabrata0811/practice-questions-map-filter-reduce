@@ -360,6 +360,8 @@ function testMapFunctions() {
 
   testFunc(charCodesOf, [97, 98, 99], ["a", "b", "c"]);
 
+  testFunc(domainNamesOf, ["gmail.com", "yahoo.com"], ["user1@gmail.com", "admin@yahoo.com"]);
+
 }
 
 function testReduceFunctions() {}
