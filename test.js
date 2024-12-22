@@ -307,6 +307,9 @@ function test() {
   testFunc(filterIncompleteProfiles, [{username: "bob", profileComplete: false}], [{username: "alice", profileComplete: true}, {username: "bob", profileComplete: false}]);
   testFunc(filterIncompleteProfiles, [], [{username: "bob", profileComplete: false}]);
 
+  testFunc(filterHighGrades, [{name: "Jane", grade: 85}], [{name: "John", grade: 75}, {name: "Jane", grade: 85}]);
+  testFunc(filterHighGrades, [], [{ name: "John", grade: 75 }]);
+
   console.table(testLog);
 }
 
