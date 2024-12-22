@@ -1,6 +1,6 @@
-import filterModule from "./filter.js";
-import mapModule from "./map.js";
-import reduceModule from "./reduce.js";
+import filterFunctions from "./filter.js";
+import mapFunctions from "./map.js";
+import reduceFunctions from "./reduce.js";
 
 const {
   filterEvenNumbers,
@@ -103,7 +103,7 @@ const {
   findLargeCities,
   findInStockItems,
   findAnimalsByHabitat,
-} = filterModule;
+} = filterFunctions;
 
 const {
   squaresOf,
@@ -206,7 +206,7 @@ const {
   getStudentCourses,
   summarizeBookChapters,
   getEventAttendees,
-} = mapModule;
+} = mapFunctions;
 
 const {
   sumOf,
@@ -265,7 +265,7 @@ const {
   groupByDate,
   findMinMax,
   sumByCategory,
-} = reduceModule;
+} = reduceFunctions;
 
 const testLog = [];
 
@@ -309,6 +309,9 @@ function test() {
 
   testFunc(filterHighGrades, [{name: "Jane", grade: 85}], [{name: "John", grade: 75}, {name: "Jane", grade: 85}]);
   testFunc(filterHighGrades, [], [{ name: "John", grade: 75 }]);
+
+  testFunc(filterInStockProducts, [{product: "apple", inStock: true}], [{product: "apple", inStock: true}, {product: "banana", inStock: false}]);
+  testFunc(filterInStockProducts, [], [{product: "banana", inStock: false}]);
 
   console.table(testLog);
 }

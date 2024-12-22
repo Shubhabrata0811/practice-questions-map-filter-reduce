@@ -1,0 +1,23 @@
+┌───────┬───────────────────────────────┬───────────────────────────────────┬──────────────────────────────────────────────────┬─────────────────────────────────────────────────┬────────┐
+│ (idx) │ Function                      │ Args                              │ Result                                           │ Expected                                        │ Visual │
+├───────┼───────────────────────────────┼───────────────────────────────────┼──────────────────────────────────────────────────┼─────────────────────────────────────────────────┼────────┤
+│     0 │ "filterEvenNumbers"           │ "1,2,3,4,5"                       │ [ 2, 4 ]                                         │ [ 2, 4 ]                                        │ "✅"    │
+│     1 │ "filterEvenNumbers"           │ "1,3,5"                           │ []                                               │ []                                              │ "✅"    │
+│     2 │ "filterLongWords"             │ "apple,banana,kiwi,grape"         │ [ "banana" ]                                     │ [ "banana" ]                                    │ "✅"    │
+│     3 │ "filterLongWords"             │ "apple,kiwi"                      │ []                                               │ []                                              │ "✅"    │
+│     4 │ "filterAdults"                │ "[object Object],[object Object]" │ [ { name: "Bob", age: 35 } ]                     │ [ { name: "Bob", age: 35 } ]                    │ "✅"    │
+│     5 │ "filterAdults"                │ "[object Object]"                 │ []                                               │ []                                              │ "✅"    │
+│     6 │ "filterActiveUsers"           │ "[object Object],[object Object]" │ [ { username: "alice", active: true } ]          │ [ { username: "alice", active: true } ]         │ "✅"    │
+│     7 │ "filterActiveUsers"           │ "[object Object]"                 │ []                                               │ []                                              │ "✅"    │
+│     8 │ "filterNumbersGreaterThanTen" │ "5,12,7,18,3"                     │ [ 12, 18 ]                                       │ [ 12, 18 ]                                      │ "✅"    │
+│     9 │ "filterNumbersGreaterThanTen" │ "12,18"                           │ [ 12, 18 ]                                       │ [ 12, 18 ]                                      │ "✅"    │
+│    10 │ "filterNumbersGreaterThanTen" │ "5,7,3"                           │ []                                               │ []                                              │ "✅"    │
+│    11 │ "filterLongBooks"             │ "[object Object],[object Object]" │ [ { title: "Book 2", pages: 250 } ]              │ [ { title: "Book 2", pages: 250 } ]             │ "✅"    │
+│    12 │ "filterLongBooks"             │ "[object Object]"                 │ []                                               │ []                                              │ "✅"    │
+│    13 │ "filterIncompleteProfiles"    │ "[object Object],[object Object]" │ [ { username: "alice", profileComplete: true } ] │ [ { username: "bob", profileComplete: false } ] │ "✅"    │
+│    14 │ "filterIncompleteProfiles"    │ "[object Object]"                 │ []                                               │ []                                              │ "✅"    │
+│    15 │ "filterHighGrades"            │ "[object Object],[object Object]" │ [ { name: "Jane", grade: 85 } ]                  │ [ { name: "Jane", grade: 85 } ]                 │ "✅"    │
+│    16 │ "filterHighGrades"            │ "[object Object]"                 │ []                                               │ []                                              │ "✅"    │
+│    17 │ "filterInStockProducts"       │ "[object Object],[object Object]" │ [ { product: "apple", inStock: true } ]          │ [ { product: "apple", inStock: true } ]         │ "✅"    │
+│    18 │ "filterInStockProducts"       │ "[object Object]"                 │ []                                               │ []                                              │ "✅"    │
+└───────┴───────────────────────────────┴───────────────────────────────────┴──────────────────────────────────────────────────┴─────────────────────────────────────────────────┴────────┘
