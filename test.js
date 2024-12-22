@@ -326,6 +326,11 @@ function test() {
   testFunc(filterInStockProducts, [{product: "apple", inStock: true}], [{product: "apple", inStock: true}, {product: "banana", inStock: false}]);
   testFunc(filterInStockProducts, [], [{product: "banana", inStock: false}]);
 
+
+  testFunc(filterRecentOrders, [{orderDate: "2024-12-01"}], [{orderDate: "2024-11-01"}, {orderDate: "2024-12-01"}]);
+  testFunc(filterRecentOrders, [{orderDate: "2024-12-01"}], [{orderDate: "2025-01-01"}, {orderDate: "2024-12-01"}]);
+  testFunc(filterRecentOrders, [], [{ orderDate: "2024-11-01" }]);
+
   console.table(testLog);
 }
 

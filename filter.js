@@ -1,3 +1,16 @@
+//Auxiliary functions
+const range = function (firstTerm, maxTerm, commonDiff) {
+  const arr = [];
+
+  for (let term = firstTerm; term <= maxTerm; term += commonDiff) {
+    arr.push(term);
+  }
+
+  return arr;
+};
+
+const sum = (num1, num2) => num1 + num2;
+
 // even numbers [1, 2, 3, 4, 5] => [2, 4]
 const filterEvenNumbers = function (numbers) {
   return numbers.filter((num) => num % 2 === 0 && num > 0);
@@ -44,7 +57,36 @@ const filterInStockProducts = function (products) {
 };
 
 // orders placed in the last 30 days [{orderDate: "2024-11-01"}, {orderDate: "2024-12-01"}] => [{orderDate: "2024-12-01"}]
-const filterRecentOrders = function (orders) {};
+const isLeapYear = (year) => 
+  year % 400 === 0 || (!(year % 100 === 0) && (year % 4 === 0));
+
+const getDaysInYear = (year) => isLeapYear(year) ? 366 : 365;
+
+const getDaysUptoPrevMonth = function(month, year) {
+  const monthDays = [31, isLeapYear(year) ? 29 : 28, 31, 30, 31,
+                     30, 31, 31, 30, 31, 30, 31];
+  return monthDays.filter((days, monthIdx) => monthIdx < month - 1)
+    .reduce((totalDays, days) => totalDays + days, 0);
+}
+
+const daysFromYearStart = function (date, referenceYear = 2024) {
+  const [year, month, day] = date.split("-").map((ele) => +ele);
+  const noOfDays =
+    range(referenceYear, year - 1, 1).map(getDaysInYear).reduce(sum, 0) 
+    + getDaysUptoPrevMonth(month) 
+    + day;
+
+  return noOfDays;
+};
+
+const isWithinDays = function (date, daysRange, toDayDate = "2024-12-22") {
+  const daysGap = daysFromYearStart(toDayDate) - daysFromYearStart(date);
+  return daysGap <= daysRange && daysGap > -1;
+};
+
+const filterRecentOrders = function (orders) {
+  return orders.filter((order) => isWithinDays(order.orderDate, 30));
+};
 
 // products with a price lower than the average [{name: "item1", price: 10}, {name: "item2", price: 20}, {name: "item3", price: 5}] => [{name: "item1", price: 10}, {name: "item3", price: 5}]
 const filterBelowAveragePrice = function (products) {};
