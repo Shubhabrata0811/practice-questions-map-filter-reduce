@@ -271,14 +271,27 @@ const testLog = [];
 
 const testFunc = function (func, expected, ...args) {
   const result = func(args[0]);
-  const resultStr = "" + result;
-  const expectedStr = "" + expected;
+
+  const toString = function(ele) {
+    let str = "";
+
+    if(typeof ele === 'object'){
+      str += "KEYS: " + Object.keys(ele) + " VALUES: " + Object.values(ele);
+    } else {
+      str += ele;
+    }
+
+    return str;
+  }
+
+  const resultStr = "" + result.map(toString);
+  const expectedStr = "" + expected.map(toString);
   const visual = resultStr === expectedStr ? "✅" : "❌";
   testLog.push({
     Function: func.name,
     Args: args.join(" | "),
-    Result: result,
-    Expected: expected,
+    Result: resultStr,
+    Expected: expectedStr,
     Visual: visual,
   });
 };
@@ -305,7 +318,7 @@ function test() {
   testFunc(filterLongBooks, [], [{title: "Book 1", pages: 150}]);
 
   testFunc(filterIncompleteProfiles, [{username: "bob", profileComplete: false}], [{username: "alice", profileComplete: true}, {username: "bob", profileComplete: false}]);
-  testFunc(filterIncompleteProfiles, [], [{username: "bob", profileComplete: false}]);
+  testFunc(filterIncompleteProfiles, [], [{username: "alice", profileComplete: true}]);
 
   testFunc(filterHighGrades, [{name: "Jane", grade: 85}], [{name: "John", grade: 75}, {name: "Jane", grade: 85}]);
   testFunc(filterHighGrades, [], [{ name: "John", grade: 75 }]);
