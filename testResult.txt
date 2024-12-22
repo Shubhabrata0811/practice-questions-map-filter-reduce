@@ -23,4 +23,7 @@
 │    19 │ "filterRecentOrders"          │ "[object Object],[object Object]" │ "KEYS: orderDate VALUES: 2024-12-01"               │ "KEYS: orderDate VALUES: 2024-12-01"               │ "✅"    │
 │    20 │ "filterRecentOrders"          │ "[object Object],[object Object]" │ "KEYS: orderDate VALUES: 2024-12-01"               │ "KEYS: orderDate VALUES: 2024-12-01"               │ "✅"    │
 │    21 │ "filterRecentOrders"          │ "[object Object]"                 │ ""                                                 │ ""                                                 │ "✅"    │
+│    22 │ "squaresOf"                   │ "1,2,3"                           │ "1,4,9"                                            │ "1,4,9"                                            │ "✅"    │
+│    23 │ "squaresOf"                   │ "-1,-2,-3"                        │ "1,4,9"                                            │ "1,4,9"                                            │ "✅"    │
+│    24 │ "squaresOf"                   │ ""                                │ ""                                                 │ ""                                                 │ "✅"    │
 └───────┴───────────────────────────────┴───────────────────────────────────┴────────────────────────────────────────────────────┴────────────────────────────────────────────────────┴────────┘

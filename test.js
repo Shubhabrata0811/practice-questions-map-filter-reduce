@@ -296,7 +296,7 @@ const testFunc = function (func, expected, ...args) {
   });
 };
 
-function test() {
+function testFilterFunctions() {
 
   testFunc(filterEvenNumbers, [2, 4], [1, 2, 3, 4, 5]);
   testFunc(filterEvenNumbers, [], [1, 3, 5]);
@@ -330,6 +330,22 @@ function test() {
   testFunc(filterRecentOrders, [{orderDate: "2024-12-01"}], [{orderDate: "2024-11-01"}, {orderDate: "2024-12-01"}]);
   testFunc(filterRecentOrders, [{orderDate: "2024-12-01"}], [{orderDate: "2025-01-01"}, {orderDate: "2024-12-01"}]);
   testFunc(filterRecentOrders, [], [{ orderDate: "2024-11-01" }]);
+
+}
+
+function testMapFunctions() {
+
+  testFunc(squaresOf, [1, 4, 9], [1, 2, 3]);
+  testFunc(squaresOf, [1, 4, 9], [-1, -2, -3]);
+  testFunc(squaresOf, [], []);
+}
+
+function testReduceFunctions() {}
+
+function test(){
+  testFilterFunctions();
+  testMapFunctions();
+  testReduceFunctions();
 
   console.table(testLog);
 }
