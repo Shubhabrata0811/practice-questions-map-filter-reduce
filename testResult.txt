@@ -33,4 +33,6 @@
 │    29 │ "firstCharactersOf"           │ "apple,banana,kiwi"               │ "a,b,k"                                            │ "a,b,k"                                            │ "✅"    │
 │    30 │ "firstCharactersOf"           │ ",apple"                          │ ",a"                                               │ ",a"                                               │ "✅"    │
 │    31 │ "truthValuesOf"               │ "0,1,2,3"                         │ "false,true,true,true"                             │ "false,true,true,true"                             │ "✅"    │
+│    32 │ "reversedStringsOf"           │ "hello,world"                     │ "olleh,dlrow"                                      │ "olleh,dlrow"                                      │ "✅"    │
+│    33 │ "reversedStringsOf"           │ ",tenet"                          │ ",tenet"                                           │ ",tenet"                                           │ "✅"    │
 └───────┴───────────────────────────────┴───────────────────────────────────┴────────────────────────────────────────────────────┴────────────────────────────────────────────────────┴────────┘

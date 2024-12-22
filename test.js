@@ -350,6 +350,9 @@ function testMapFunctions() {
 
   testFunc(truthValuesOf, [false, true, true, true], [0, 1, 2, 3]);
 
+  testFunc(reversedStringsOf, ["olleh", "dlrow"], ["hello", "world"]);
+  testFunc(reversedStringsOf, ["", "tenet"], ["", "tenet"]);
+
 }
 
 function testReduceFunctions() {}
