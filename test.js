@@ -379,6 +379,18 @@ function testMapFunctions() {
 
   testFunc(reversedWordsOf, ["olleh dlrow", "eybdoog noom"], ["hello world", "goodbye moon"]);
 
+  testFunc(uniqueCharactersOf, ["aple", "ban", "grape"], ["apple", "banana", "grape"]);
+
+  testFunc(rangesOf, [[0, 1, 2], [0, 1, 2, 3, 4], [0, 1]], [3, 5, 2]);
+
+  testFunc(capitalizedFirstLettersOf, ["Hello World", "Goodbye Moon"], ["hello world", "goodbye moon"]);
+
+  testFunc(wordLengthsOf, [[5, 3], [6, 5]], ["apple pie", "banana split"]);
+
+  testFunc(flattenedArraysOf, [[1, 2, 3], [4, 5, 6]], [[1, [2, 3]], [4, [5, 6]]]);
+
+  testFunc(sortedLettersOf, ["act", "abt", "art"], ["cat", "bat", "rat"]);
+
 }
 
 function testReduceFunctions() {}
