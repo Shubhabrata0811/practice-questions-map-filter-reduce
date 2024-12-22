@@ -348,6 +348,7 @@ function testMapFunctions() {
   testFunc(firstCharactersOf, ["a", "b", "k"], ["apple", "banana", "kiwi"]);
   testFunc(firstCharactersOf, ["", "a"], ["", "apple"]);
 
+  testFunc(truthValuesOf, [false, true, true, true], [0, 1, 2, 3]);
 
 }
 
