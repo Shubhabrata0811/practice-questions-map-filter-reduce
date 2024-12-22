@@ -344,6 +344,11 @@ function testMapFunctions() {
 
   testFunc(uppercaseOf, ["HELLO", "WORLD"], ["hello", "world"]);
   testFunc(uppercaseOf, ["", ""], ["", ""]);
+
+  testFunc(firstCharactersOf, ["a", "b", "k"], ["apple", "banana", "kiwi"]);
+  testFunc(firstCharactersOf, ["", "a"], ["", "apple"]);
+
+
 }
 
 function testReduceFunctions() {}
