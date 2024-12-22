@@ -1,6 +1,16 @@
 //Auxiliary functions
 const getReverseStr = (str) => Array.from(str).reduce((c1, c2) => c2 + c1, "");
 
+const range = function (firstTerm = 1, maxTerm = Infinity, commonDiff = 1) {
+  const arr = [];
+
+  for (let term = firstTerm; term <= maxTerm; term += commonDiff) {
+    arr.push(term);
+  }
+
+  return arr;
+};
+
 // squares of [1, 2, 3] => [1, 4, 9]
 const squaresOf = function (numbers) {
   return numbers.map((number) => number ** 2);
@@ -122,7 +132,9 @@ const uniqueCharactersOf = function (strings) {
 };
 
 // generate ranges from [3, 5, 2] => [[0, 1, 2], [0, 1, 2, 3, 4], [0, 1]]
-const rangesOf = function (numbers) {return []};
+const rangesOf = function (numbers) {
+  return numbers.map((num) => range(0, num - 1));
+};
 
 // capitalize first letters of ["hello world", "goodbye moon"] => ["Hello World", "Goodbye Moon"]
 const capitalizedFirstLettersOf = function (strings) {return []};
