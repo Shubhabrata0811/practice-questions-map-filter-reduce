@@ -38,4 +38,5 @@
 │    34 │ "doubleLettersOf"             │ "cat,dog,bat"                     │ "ccaatt,ddoogg,bbaatt"                             │ "ccaatt,ddoogg,bbaatt"                             │ "✅"    │
 │    35 │ "doubleLettersOf"             │ ",ccaatt"                         │ ",ccccaaaatttt"                                    │ ",ccccaaaatttt"                                    │ "✅"    │
 │    36 │ "negatedBooleansOf"           │ "true,false,true"                 │ "false,true,false"                                 │ "false,true,false"                                 │ "✅"    │
+│    37 │ "charCodesOf"                 │ "a,b,c"                           │ "97,98,99"                                         │ "97,98,99"                                         │ "✅"    │
 └───────┴───────────────────────────────┴───────────────────────────────────┴────────────────────────────────────────────────────┴────────────────────────────────────────────────────┴────────┘

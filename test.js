@@ -358,6 +358,8 @@ function testMapFunctions() {
 
   testFunc(negatedBooleansOf, [false, true, false], [true, false, true]);
 
+  testFunc(charCodesOf, [97, 98, 99], ["a", "b", "c"]);
+
 }
 
 function testReduceFunctions() {}
