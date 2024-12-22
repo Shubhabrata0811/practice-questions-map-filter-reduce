@@ -362,6 +362,8 @@ function testMapFunctions() {
 
   testFunc(domainNamesOf, ["gmail.com", "yahoo.com"], ["user1@gmail.com", "admin@yahoo.com"]);
 
+  testFunc(splitWordsOf, [["hello", "world"], ["goodbye", "moon"]], ["hello world", "goodbye moon"]);
+
 }
 
 function testReduceFunctions() {}
