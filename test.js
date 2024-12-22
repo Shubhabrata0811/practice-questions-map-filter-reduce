@@ -353,6 +353,9 @@ function testMapFunctions() {
   testFunc(reversedStringsOf, ["olleh", "dlrow"], ["hello", "world"]);
   testFunc(reversedStringsOf, ["", "tenet"], ["", "tenet"]);
 
+  testFunc(doubleLettersOf, ["ccaatt", "ddoogg", "bbaatt"], ["cat", "dog", "bat"]);
+  testFunc(doubleLettersOf, ["", "ccccaaaatttt"], ["", "ccaatt"]);
+
 }
 
 function testReduceFunctions() {}

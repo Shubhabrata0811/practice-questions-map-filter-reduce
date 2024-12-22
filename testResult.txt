@@ -35,4 +35,6 @@
 │    31 │ "truthValuesOf"               │ "0,1,2,3"                         │ "false,true,true,true"                             │ "false,true,true,true"                             │ "✅"    │
 │    32 │ "reversedStringsOf"           │ "hello,world"                     │ "olleh,dlrow"                                      │ "olleh,dlrow"                                      │ "✅"    │
 │    33 │ "reversedStringsOf"           │ ",tenet"                          │ ",tenet"                                           │ ",tenet"                                           │ "✅"    │
+│    34 │ "doubleLettersOf"             │ "cat,dog,bat"                     │ "ccaatt,ddoogg,bbaatt"                             │ "ccaatt,ddoogg,bbaatt"                             │ "✅"    │
+│    35 │ "doubleLettersOf"             │ ",ccaatt"                         │ ",ccccaaaatttt"                                    │ ",ccccaaaatttt"                                    │ "✅"    │
 └───────┴───────────────────────────────┴───────────────────────────────────┴────────────────────────────────────────────────────┴────────────────────────────────────────────────────┴────────┘
