@@ -43,4 +43,5 @@
 │    39 │ "splitWordsOf"                │ "hello world,goodbye moon"        │ "KEYS: 0,1 VALUES: hello,world,KEYS: 0,1 VALUES: goodbye,moon" │ "KEYS: 0,1 VALUES: hello,world,KEYS: 0,1 VALUES: goodbye,moon" │ "✅"    │
 │    40 │ "joinedArraysOf"              │ "a,b,c,d"                         │ "ab,cd"                                                        │ "ab,cd"                                                        │ "✅"    │
 │    41 │ "repeatedStringsOf"           │ "hi,bye"                          │ "hihi,byebye"                                                  │ "hihi,byebye"                                                  │ "✅"    │
+│    42 │ "countVowelsOf"               │ "apple,banana,kiwi"               │ "2,3,2"                                                        │ "2,3,2"                                                        │ "✅"    │
 └───────┴───────────────────────────────┴───────────────────────────────────┴────────────────────────────────────────────────────────────────┴────────────────────────────────────────────────────────────────┴────────┘

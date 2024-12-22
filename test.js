@@ -368,6 +368,8 @@ function testMapFunctions() {
 
   testFunc(repeatedStringsOf, ["hihi", "byebye"], ["hi", "bye"]);
 
+  testFunc(countVowelsOf, [2, 3, 2], ["apple", "banana", "kiwi"]);
+
 }
 
 function testReduceFunctions() {}

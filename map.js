@@ -70,7 +70,15 @@ const repeatedStringsOf = function (strings) {
 };
 
 // count vowels in ["apple", "banana", "grape"] => [2, 3, 2]
-const countVowelsOf = function (strings) { };
+
+const vowelsInStr = (str) => {
+  const vowels = "aeiouAEIOU";
+  return Array.from(str).reduce((count, char) => 
+    vowels.includes(char) ? count + 1 : count, 0);
+};
+const countVowelsOf = function (strings) {
+  return strings.map(vowelsInStr);
+};
 
 // reverse arrays of [[1, 2, 3], [4, 5, 6]] => [[3, 2, 1], [6, 5, 4]]
 const reversedArraysOf = function (arrays) { };
