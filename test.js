@@ -338,6 +338,9 @@ function testMapFunctions() {
   testFunc(squaresOf, [1, 4, 9], [1, 2, 3]);
   testFunc(squaresOf, [1, 4, 9], [-1, -2, -3]);
   testFunc(squaresOf, [], []);
+
+  testFunc(lengthsOf, [5, 6, 4], ["apple", "banana", "kiwi"]);
+  testFunc(lengthsOf, [0, 0], ["", ""]);
 }
 
 function testReduceFunctions() {}
