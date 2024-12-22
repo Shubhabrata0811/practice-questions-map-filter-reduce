@@ -42,4 +42,5 @@
 │    38 │ "domainNamesOf"               │ "user1@gmail.com,admin@yahoo.com" │ "gmail.com,yahoo.com"                                          │ "gmail.com,yahoo.com"                                          │ "✅"    │
 │    39 │ "splitWordsOf"                │ "hello world,goodbye moon"        │ "KEYS: 0,1 VALUES: hello,world,KEYS: 0,1 VALUES: goodbye,moon" │ "KEYS: 0,1 VALUES: hello,world,KEYS: 0,1 VALUES: goodbye,moon" │ "✅"    │
 │    40 │ "joinedArraysOf"              │ "a,b,c,d"                         │ "ab,cd"                                                        │ "ab,cd"                                                        │ "✅"    │
+│    41 │ "repeatedStringsOf"           │ "hi,bye"                          │ "hihi,byebye"                                                  │ "hihi,byebye"                                                  │ "✅"    │
 └───────┴───────────────────────────────┴───────────────────────────────────┴────────────────────────────────────────────────────────────────┴────────────────────────────────────────────────────────────────┴────────┘

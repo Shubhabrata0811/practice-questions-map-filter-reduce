@@ -366,6 +366,8 @@ function testMapFunctions() {
 
   testFunc(joinedArraysOf, ["ab", "cd"], [["a", "b"], ["c", "d"]]);
 
+  testFunc(repeatedStringsOf, ["hihi", "byebye"], ["hi", "bye"]);
+
 }
 
 function testReduceFunctions() {}
