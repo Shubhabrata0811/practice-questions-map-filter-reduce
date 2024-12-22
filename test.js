@@ -356,6 +356,8 @@ function testMapFunctions() {
   testFunc(doubleLettersOf, ["ccaatt", "ddoogg", "bbaatt"], ["cat", "dog", "bat"]);
   testFunc(doubleLettersOf, ["", "ccccaaaatttt"], ["", "ccaatt"]);
 
+  testFunc(negatedBooleansOf, [false, true, false], [true, false, true]);
+
 }
 
 function testReduceFunctions() {}
