@@ -370,6 +370,8 @@ function testMapFunctions() {
 
   testFunc(countVowelsOf, [2, 3, 2], ["apple", "banana", "kiwi"]);
 
+  testFunc(reversedArraysOf, [[3, 2, 1], [6, 5, 4]], [[1, 2, 3], [4, 5, 6]]);
+
 }
 
 function testReduceFunctions() {}
