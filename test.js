@@ -301,11 +301,11 @@ function test() {
   testFunc(filterNumbersGreaterThanTen, [12, 18], [12, 18]);
   testFunc(filterNumbersGreaterThanTen, [], [5, 7, 3]);
 
-
   testFunc(filterLongBooks, [{title: "Book 2", pages: 250}], [{title: "Book 1", pages: 150}, {title: "Book 2", pages: 250}]);
   testFunc(filterLongBooks, [], [{title: "Book 1", pages: 150}]);
 
-
+  testFunc(filterIncompleteProfiles, [{username: "bob", profileComplete: false}], [{username: "alice", profileComplete: true}, {username: "bob", profileComplete: false}]);
+  testFunc(filterIncompleteProfiles, [], [{username: "bob", profileComplete: false}]);
 
   console.table(testLog);
 }
