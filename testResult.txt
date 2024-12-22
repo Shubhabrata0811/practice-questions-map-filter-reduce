@@ -46,4 +46,6 @@
 │    42 │ "countVowelsOf"               │ "apple,banana,kiwi"               │ "2,3,2"                                                        │ "2,3,2"                                                        │ "✅"    │
 │    43 │ "reversedArraysOf"            │ "3,2,1,6,5,4"                     │ "KEYS: 0,1,2 VALUES: 3,2,1,KEYS: 0,1,2 VALUES: 6,5,4"          │ "KEYS: 0,1,2 VALUES: 3,2,1,KEYS: 0,1,2 VALUES: 6,5,4"          │ "✅"    │
 │    44 │ "withoutVowelsOf"             │ "apple,banana,kiwi"               │ "ppl,bnn,kw"                                                   │ "ppl,bnn,kw"                                                   │ "✅"    │
+│    45 │ "cumulativeSumsOf"            │ "1,2,3,4,5,6"                     │ "KEYS: 0,1,2 VALUES: 1,3,6,KEYS: 0,1,2 VALUES: 4,9,15"         │ "KEYS: 0,1,2 VALUES: 1,3,6,KEYS: 0,1,2 VALUES: 4,9,15"         │ "✅"    │
+│    46 │ "cumulativeSumsOf"            │ ",4,5,6"                          │ "KEYS:  VALUES: ,KEYS: 0,1,2 VALUES: 4,9,15"                   │ "KEYS:  VALUES: ,KEYS: 0,1,2 VALUES: 4,9,15"                   │ "✅"    │
 └───────┴───────────────────────────────┴───────────────────────────────────┴────────────────────────────────────────────────────────────────┴────────────────────────────────────────────────────────────────┴────────┘

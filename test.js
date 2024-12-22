@@ -374,6 +374,9 @@ function testMapFunctions() {
 
   testFunc(withoutVowelsOf, ["ppl", "bnn", "kw"], ["apple", "banana", "kiwi"]);
 
+  testFunc(cumulativeSumsOf, [[1, 3, 6], [4, 9, 15]], [[1, 2, 3], [4, 5, 6]]);
+  testFunc(cumulativeSumsOf, [[], [4, 9, 15]], [[], [4, 5, 6]]);
+
 }
 
 function testReduceFunctions() {}
