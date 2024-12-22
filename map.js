@@ -137,7 +137,14 @@ const rangesOf = function (numbers) {
 };
 
 // capitalize first letters of ["hello world", "goodbye moon"] => ["Hello World", "Goodbye Moon"]
-const capitalizedFirstLettersOf = function (strings) {return []};
+const capitalizedFirstLettersOf = function (strings) {
+  return strings.map((str) => 
+    str.split(" ").map((word) => {
+      word = word[0].toUpperCase() + word.slice(1);
+      return word;
+    }
+  ).join(" "));
+};
 
 // find word lengths in ["apple pie", "banana split"] => [[5, 3], [6, 5]]
 const wordLengthsOf = function (strings) {return []};
