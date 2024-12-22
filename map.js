@@ -152,7 +152,9 @@ const wordLengthsOf = function (strings) {
 };
 
 // flatten nested arrays of [[1, [2, 3]], [4, [5, 6]]] => [[1, 2, 3], [4, 5, 6]]
-const flattenedArraysOf = function (arrays) {return []};
+const flattenedArraysOf = function (arrays) {
+  return arrays.map((arr) => arr.flat());
+};
 
 // sort letters in ["cat", "bat", "rat"] alphabetically => ["act", "abt", "art"]
 const sortedLettersOf = function (strings) {return []};
