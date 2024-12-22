@@ -364,6 +364,8 @@ function testMapFunctions() {
 
   testFunc(splitWordsOf, [["hello", "world"], ["goodbye", "moon"]], ["hello world", "goodbye moon"]);
 
+  testFunc(joinedArraysOf, ["ab", "cd"], [["a", "b"], ["c", "d"]]);
+
 }
 
 function testReduceFunctions() {}
