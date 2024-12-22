@@ -377,6 +377,8 @@ function testMapFunctions() {
   testFunc(cumulativeSumsOf, [[1, 3, 6], [4, 9, 15]], [[1, 2, 3], [4, 5, 6]]);
   testFunc(cumulativeSumsOf, [[], [4, 9, 15]], [[], [4, 5, 6]]);
 
+  testFunc(reversedWordsOf, ["olleh dlrow", "eybdoog noom"], ["hello world", "goodbye moon"]);
+
 }
 
 function testReduceFunctions() {}

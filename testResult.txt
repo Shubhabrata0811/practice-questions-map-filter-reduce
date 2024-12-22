@@ -48,4 +48,5 @@
 │    44 │ "withoutVowelsOf"             │ "apple,banana,kiwi"               │ "ppl,bnn,kw"                                                   │ "ppl,bnn,kw"                                                   │ "✅"    │
 │    45 │ "cumulativeSumsOf"            │ "1,2,3,4,5,6"                     │ "KEYS: 0,1,2 VALUES: 1,3,6,KEYS: 0,1,2 VALUES: 4,9,15"         │ "KEYS: 0,1,2 VALUES: 1,3,6,KEYS: 0,1,2 VALUES: 4,9,15"         │ "✅"    │
 │    46 │ "cumulativeSumsOf"            │ ",4,5,6"                          │ "KEYS:  VALUES: ,KEYS: 0,1,2 VALUES: 4,9,15"                   │ "KEYS:  VALUES: ,KEYS: 0,1,2 VALUES: 4,9,15"                   │ "✅"    │
+│    47 │ "reversedWordsOf"             │ "hello world,goodbye moon"        │ "olleh dlrow,eybdoog noom"                                     │ "olleh dlrow,eybdoog noom"                                     │ "✅"    │
 └───────┴───────────────────────────────┴───────────────────────────────────┴────────────────────────────────────────────────────────────────┴────────────────────────────────────────────────────────────────┴────────┘
