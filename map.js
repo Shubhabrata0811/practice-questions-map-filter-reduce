@@ -32,7 +32,9 @@ const reversedStringsOf = function (strings) {
 };
 
 // double letters of ["cat", "dog", "bat"] => ["ccaatt", "ddoogg", "bbaatt"]
-const getDoubleLetteredStr = (str) => Array.from(str).reduce((updatedStr, char) => updatedStr + char.repeat(2), "");
+const getDoubleLetteredStr = (str) =>
+   Array.from(str).reduce((updatedStr, char) =>
+     updatedStr + char.repeat(2), "");
 
 const doubleLettersOf = function (strings) {
   return strings.map(getDoubleLetteredStr);
@@ -86,7 +88,12 @@ const reversedArraysOf = function (arrays) {
 };
 
 // remove vowels from ["apple", "banana", "grape"] => ["ppl", "bnn", "grp"]
-const withoutVowelsOf = function (strings) { };
+const isVowel = (char) => "aeiouAEIOU".includes(char);
+
+const withoutVowelsOf = function (strings) {
+  return strings.map((str) => Array.from(str).filter((char) => 
+    !isVowel(char)).join(""));
+};
 
 // cumulative sums of [[1, 2, 3], [4, 5, 6]] => [[1, 3, 6], [4, 9, 15]]
 // Example: cumulative sum of [1, 2, 3] is [1, 1+2, 1+2+3]
