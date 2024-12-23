@@ -391,6 +391,10 @@ function testMapFunctions() {
 
   testFunc(sortedLettersOf, ["act", "abt", "art"], ["cat", "bat", "rat"]);
 
+  testFunc(wrappedStringsOf, [["apple"], ["banana"]], ["apple", "banana"]);
+
+  //testFunc(sortedLettersOf, ["act", "abt", "art"], ["cat", "bat", "rat"]);
+
 }
 
 function testReduceFunctions() {}
