@@ -400,6 +400,12 @@ function testMapFunctions() {
   testFunc(firstLettersOfNames, ['A', 'B'], [{ name: "Alice" }, { name: "Bob" }]);
   testFunc(firstLettersOfNames, [""], [{ name: "" }]);
 
+  testFunc(calculateAreas, [6, 20], [{ width: 2, height: 3 }, { width: 4, height: 5 }]);
+
+  testFunc(extractFlags, [true, false], [{ active: true }, { active: false }]);
+
+  testFunc(fullNames, ["Alice Smith", "Bob Brown"], [{ firstName: "Alice", lastName: "Smith" }, { firstName: "Bob", lastName: "Brown" }]);
+
 }
 
 function testReduceFunctions() {}
