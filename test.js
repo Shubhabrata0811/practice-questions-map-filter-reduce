@@ -393,7 +393,7 @@ function testMapFunctions() {
 
   testFunc(wrappedStringsOf, [["apple"], ["banana"]], ["apple", "banana"]);
 
-  //testFunc(sortedLettersOf, ["act", "abt", "art"], ["cat", "bat", "rat"]);
+  testFunc(extractNames, ["Alice", "Bob"], [{ name: "Alice" }, { name: "Bob" }]);
 
 }
 
