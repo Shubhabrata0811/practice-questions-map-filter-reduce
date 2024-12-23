@@ -395,6 +395,11 @@ function testMapFunctions() {
 
   testFunc(extractNames, ["Alice", "Bob"], [{ name: "Alice" }, { name: "Bob" }]);
 
+  testFunc(extractAges, [25, 30], [{ age: 25 }, { age: 30 }]);
+
+  testFunc(firstLettersOfNames, ['A', 'B'], [{ name: "Alice" }, { name: "Bob" }]);
+  testFunc(firstLettersOfNames, [""], [{ name: "" }]);
+
 }
 
 function testReduceFunctions() {}
