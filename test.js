@@ -408,6 +408,8 @@ function testMapFunctions() {
 
   testFunc(totalPrices, [20, 20], [{ price: 10, quantity: 2 }, { price: 5, quantity: 4 }]);
 
+  testFunc(isAdult, [false, true], [{ name: "Alice", age: 17 }, { name: "Bob", age: 22 }]);
+
 }
 
 function testReduceFunctions() {}
