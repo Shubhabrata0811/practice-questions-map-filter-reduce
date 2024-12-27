@@ -1,6 +1,6 @@
 import auxiliaryModule from "./auxiliaryFunctions.js";
 
-const { range, getReverseStr } = auxiliaryModule;
+const { range, getReverseStr, getAbbreviation } = auxiliaryModule;
 
 // squares of [1, 2, 3] => [1, 4, 9]
 const squaresOf = function (numbers) {
@@ -209,7 +209,12 @@ const isAdult = function (objects) {
 };
 
 // create abbreviations from [{ city: "New York", country: "USA" }, { city: "Los Angeles", country: "USA" }] => ["NY, USA", "LA, USA"]
-const abbreviations = function (objects) {};
+const abbreviations = function (objects) {
+  return objects
+    .map(({ city, country }) => [city, country])
+    .flatMap((obj) => getAbbreviation(obj[0]) + ", " + obj[1]
+  );
+};
 
 // extract scores for math tests from [{ name: "Alice", scores: { math: 90, english: 85 } }, { name: "Bob", scores: { math: 80, english: 75 } }] => [90, 80]
 const mathScores = function (objects) {};

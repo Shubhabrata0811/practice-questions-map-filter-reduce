@@ -410,6 +410,8 @@ function testMapFunctions() {
 
   testFunc(isAdult, [false, true], [{ name: "Alice", age: 17 }, { name: "Bob", age: 22 }]);
 
+  testFunc(abbreviations, ["NY, USA", "LA, USA"], [{ city: "New York", country: "USA" }, { city: "Los Angeles", country: "USA" }]);
+
 }
 
 function testReduceFunctions() {}

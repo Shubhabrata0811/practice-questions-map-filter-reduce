@@ -12,8 +12,15 @@ const range = function (firstTerm = 1, maxTerm = Infinity, commonDiff = 1) {
 
 const sum = (num1, num2) => num1 + num2;
 
+const getAbbreviation = (str) =>
+  str
+    .split(" ")
+    .map((ele) => ele[0].toUpperCase())
+    .join("");
+
 export default {
   getReverseStr,
   range,
-  sum
+  sum,
+  getAbbreviation,
 };
