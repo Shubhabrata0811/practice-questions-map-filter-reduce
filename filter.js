@@ -1,15 +1,6 @@
-//Auxiliary functions
-const range = function (firstTerm, maxTerm, commonDiff) {
-  const arr = [];
+import auxiliaryModule from "./auxiliaryFunctions.js";
 
-  for (let term = firstTerm; term <= maxTerm; term += commonDiff) {
-    arr.push(term);
-  }
-
-  return arr;
-};
-
-const sum = (num1, num2) => num1 + num2;
+const {range, sum} = auxiliaryModule;
 
 // even numbers [1, 2, 3, 4, 5] => [2, 4]
 const filterEvenNumbers = function (numbers) {
