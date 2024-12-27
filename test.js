@@ -406,6 +406,8 @@ function testMapFunctions() {
 
   testFunc(fullNames, ["Alice Smith", "Bob Brown"], [{ firstName: "Alice", lastName: "Smith" }, { firstName: "Bob", lastName: "Brown" }]);
 
+  testFunc(totalPrices, [20, 20], [{ price: 10, quantity: 2 }, { price: 5, quantity: 4 }]);
+
 }
 
 function testReduceFunctions() {}
