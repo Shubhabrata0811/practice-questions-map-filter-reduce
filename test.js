@@ -412,6 +412,9 @@ function testMapFunctions() {
 
   testFunc(abbreviations, ["NY, USA", "LA, USA"], [{ city: "New York", country: "USA" }, { city: "Los Angeles", country: "USA" }]);
 
+  testFunc(mathScores, [90, 80], [{ name: "Alice", scores: { math: 90, english: 85 } }, { name: "Bob", scores: { math: 80, english: 75 } }]);
+
+
 }
 
 function testReduceFunctions() {}
