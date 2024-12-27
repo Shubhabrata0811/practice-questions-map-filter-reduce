@@ -1,6 +1,6 @@
 import auxiliaryModule from "./auxiliaryFunctions.js";
 
-const { range, getReverseStr, getAbbreviation } = auxiliaryModule;
+const { range, getReverseStr, getAbbreviation, cumulativeSum } = auxiliaryModule;
 
 // squares of [1, 2, 3] => [1, 4, 9]
 const squaresOf = function (numbers) {
@@ -103,11 +103,6 @@ const withoutVowelsOf = function (strings) {
 
 // cumulative sums of [[1, 2, 3], [4, 5, 6]] => [[1, 3, 6], [4, 9, 15]]
 // Example: cumulative sum of [1, 2, 3] is [1, 1+2, 1+2+3]
-const cumulativeSum = function (arr) {
-  let sum = 0;
-  return arr.map((num) => (sum += num));
-};
-
 const cumulativeSumsOf = function (arrays) {
   return arrays.map(cumulativeSum);
 };

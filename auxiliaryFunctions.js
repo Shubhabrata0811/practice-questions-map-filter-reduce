@@ -18,9 +18,16 @@ const getAbbreviation = (str) =>
     .map((ele) => ele[0].toUpperCase())
     .join("");
 
+const cumulativeSum = function (arr) {
+  let sum = 0;
+  return arr.map((num) => (sum += num));
+};
+
+
 export default {
   getReverseStr,
   range,
   sum,
   getAbbreviation,
+  cumulativeSum
 };
