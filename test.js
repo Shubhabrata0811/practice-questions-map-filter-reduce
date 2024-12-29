@@ -289,7 +289,7 @@ const toString = function (ele) {
 };
 
 const testFunc = function (func, expected, ...args) {
-  const result = func(args[0]);
+  const result = func(...args);
 
   const resultStr = isPrimitiveValue(result)
     ? String(result)
