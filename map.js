@@ -234,10 +234,11 @@ const extractScores = (objects) =>
   objects.map(({ scores }) => [scores.math, scores.english]);
 
 // extract key-value pairs from [{ key: "a", value: 1 }, { key: "b", value: 2 }] => [["a", 1], ["b", 2]]
-const keyValuePairs = (objects) => objects.map(({key, value}) => [key, value]);
+const keyValuePairs = (objects) =>
+  objects.map(({ key, value }) => [key, value]);
 
 // split full names into first and last names from [{ name: "Alice Smith" }, { name: "Bob Brown" }] => [["Alice", "Smith"], ["Bob", "Brown"]]
-const splitFullNames = function (objects) {};
+const splitFullNames = (objects) => objects.map(({ name }) => name.split(" "));
 
 // normalize scores so they fall between 0 and 1 based on the max score from [{ name: "Alice", score: 80 }, { name: "Bob", score: 100 }] => [0.8, 1]
 const normalizeScores = function (objects) {};
