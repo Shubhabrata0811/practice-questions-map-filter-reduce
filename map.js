@@ -241,7 +241,7 @@ const keyValuePairs = (objects) =>
 const splitFullNames = (objects) => objects.map(({ name }) => name.split(" "));
 
 // normalize scores so they fall between 0 and 1 based on the max score from [{ name: "Alice", score: 80 }, { name: "Bob", score: 100 }] => [0.8, 1]
-const normalizeScores = function (objects) {};
+const normalizeScores = (objects) => objects.map(({ score }) => score / (objects.reduce((max, {score}) => Math.max(max, score), -Infinity)));
 
 // calculate percentage contribution of each number in [10, 20, 30] (relative to the total sum) => [16.67, 33.33, 50]
 const percentageContributions = function (numbers) {};

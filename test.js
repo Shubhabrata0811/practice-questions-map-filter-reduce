@@ -699,6 +699,15 @@ function testMapFunctions() {
     ]
   );
 
+  testFunc(
+    normalizeScores,
+    [1, 0.8],
+    [
+      { name: "Alice", score: 125 },
+      { name: "Bob", score: 100 },
+    ]
+  );
+
   testFunc(percentageContributions, [16.67, 33.33, 50], [10, 20, 30]);
 
   testFunc(subtractMin, [2, 7, 0], [3, 8, 1]);
