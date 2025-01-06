@@ -708,7 +708,7 @@ function testMapFunctions() {
     ]
   );
 
-  testFunc(percentageContributions, [16.67, 33.33, 50], [10, 20, 30]);
+  testFunc(percentageContributions, [16.67, 33.33, 50.00], [10, 20, 30]);
 
   testFunc(subtractMin, [2, 7, 0], [3, 8, 1]);
 }
