@@ -288,6 +288,32 @@ const toString = function (ele) {
   return "{" + result.join(", ") + "}";
 };
 
+const areValuesEquivalent = function (item1, item2) {
+  if (typeof item1 !== typeof item2) {
+    return false;
+  }
+
+  if (typeof item1 !== "object" || item1 === null || item2 === null) {
+    String(item1) === "NaN" && (item1 += "") && (item2 += "");
+    return item1 === item2;
+  }
+
+  if (Array.isArray(item1) || Array.isArray(item2)) {
+    return (
+      Array.isArray(item1) &&
+      Array.isArray(item2) &&
+      item1.every((_, idx) => areValuesEquivalent(item1[idx], item2[idx]))
+    );
+  }
+
+  return (
+    Object.keys(item1).length === Object.keys(item2).length &&
+    Object.keys(item1).every((key) =>
+      areValuesEquivalent(item1[key], item2[key])
+    )
+  );
+};
+
 const testFunc = function (func, expected, ...args) {
   const result = func(...args);
 
@@ -299,7 +325,7 @@ const testFunc = function (func, expected, ...args) {
     ? String(expected)
     : "" + expected.map(toString);
 
-  const visual = expectedStr === expectedStr ? "✅" : "❌";
+  const visual = areValuesEquivalent(result, expected) ? "✅" : "❌";
 
   testLog.push({
     Function: func.name,
@@ -399,7 +425,7 @@ function testFilterFunctions() {
 }
 
 function testMapFunctions() {
-  testFunc(squaresOf, [1, 4, 9], [1, 2, 3], "ghascdv", { k1: 1, k2: 2 });
+  testFunc(squaresOf, [1, 4, 9], [1, 2, 3]);
   testFunc(squaresOf, [1, 4, 9], [-1, -2, -3]);
   testFunc(squaresOf, [], []);
 
@@ -616,6 +642,30 @@ function testMapFunctions() {
     [
       { x: 1, y: 2 },
       { x: 3, y: 4 },
+    ]
+  );
+
+  testFunc(
+    fullNameAndAge,
+    [
+      ["Alice Smith", 25],
+      ["Bob Brown", 30],
+    ],
+    [
+      { firstName: "Alice", lastName: "Smith", age: 25 },
+      { firstName: "Bob", lastName: "Brown", age: 30 },
+    ]
+  );
+
+  testFunc(
+    extractScores,
+    [
+      [90, 85],
+      [80, 75],
+    ],
+    [
+      { name: "Alice", scores: { math: 90, english: 85 } },
+      { name: "Bob", scores: { math: 80, english: 75 } },
     ]
   );
 }

@@ -1,6 +1,7 @@
 import auxiliaryModule from "./auxiliaryFunctions.js";
 
-const { range, getReverseStr, getAbbreviation, cumulativeSum } = auxiliaryModule;
+const { range, getReverseStr, getAbbreviation, cumulativeSum } =
+  auxiliaryModule;
 
 // squares of [1, 2, 3] => [1, 4, 9]
 const squaresOf = function (numbers) {
@@ -200,32 +201,37 @@ const totalPrices = function (objects) {
 // determine if a person is an adult from [{ name: "Alice", age: 17 }, { name: "Bob", age: 22 }] => [false, true]
 // (age >= 18)
 const isAdult = function (objects) {
-  return objects.map(({age}) => age >= 18);
+  return objects.map(({ age }) => age >= 18);
 };
 
 // create abbreviations from [{ city: "New York", country: "USA" }, { city: "Los Angeles", country: "USA" }] => ["NY, USA", "LA, USA"]
 const abbreviations = function (objects) {
   return objects
     .map(({ city, country }) => [city, country])
-    .flatMap((obj) => getAbbreviation(obj[0]) + ", " + obj[1]
-  );
+    .flatMap((obj) => getAbbreviation(obj[0]) + ", " + obj[1]);
 };
 
 // extract scores for math tests from [{ name: "Alice", scores: { math: 90, english: 85 } }, { name: "Bob", scores: { math: 80, english: 75 } }] => [90, 80]
 const mathScores = function (objects) {
-  return objects.map(({scores}) => scores.math);
+  return objects.map(({ scores }) => scores.math);
 };
 
 // extract coordinates from [{ x: 1, y: 2 }, { x: 3, y: 4 }] => [[1, 2], [3, 4]]
 const extractCoordinates = function (objects) {
-  return objects.map(({x,y}) => [x,y]);
+  return objects.map(({ x, y }) => [x, y]);
 };
 
 // extract full name and age from [{ firstName: "Alice", lastName: "Smith", age: 25 }, { firstName: "Bob", lastName: "Brown", age: 30 }] => [["Alice Smith", 25], ["Bob Brown", 30]]
-const fullNameAndAge = function (objects) {};
+const fullNameAndAge = function (objects) {
+  return objects.map(({ firstName, lastName, age }) => [
+    firstName + " " + lastName,
+    age,
+  ]);
+};
 
 // extract scores from [{ name: "Alice", scores: { math: 90, english: 85 } }, { name: "Bob", scores: { math: 80, english: 75 } }] => [[90, 85], [80, 75]]
-const extractScores = function (objects) {};
+const extractScores = (objects) =>
+  objects.map(({ scores }) => [scores.math, scores.english]);
 
 // extract key-value pairs from [{ key: "a", value: 1 }, { key: "b", value: 2 }] => [["a", 1], ["b", 2]]
 const keyValuePairs = function (objects) {};
