@@ -668,6 +668,40 @@ function testMapFunctions() {
       { name: "Bob", scores: { math: 80, english: 75 } },
     ]
   );
+
+  testFunc(
+    keyValuePairs,
+    [
+      ["a", 1],
+      ["b", 2],
+    ],
+    [
+      { key: "a", value: 1 },
+      { key: "b", value: 2 },
+    ]
+  );
+
+  testFunc(
+    splitFullNames,
+    [
+      ["Alice", "Smith"],
+      ["Bob", "Brown"],
+    ],
+    [{ name: "Alice Smith" }, { name: "Bob Brown" }]
+  );
+
+  testFunc(
+    normalizeScores,
+    [0.8, 1],
+    [
+      { name: "Alice", score: 80 },
+      { name: "Bob", score: 100 },
+    ]
+  );
+
+  testFunc(percentageContributions, [16.67, 33.33, 50], [10, 20, 30]);
+
+  testFunc(subtractMin, [2, 7, 0], [3, 8, 1]);
 }
 
 function testReduceFunctions() {}
