@@ -711,6 +711,45 @@ function testMapFunctions() {
   testFunc(percentageContributions, [16.67, 33.33, 50.00], [10, 20, 30]);
 
   testFunc(subtractMin, [2, 7, 0], [3, 8, 1]);
+
+  testFunc(
+    calculateRanks,
+    [3, 1, 2],
+    [
+      { name: "Alice", score: 80 },
+      { name: "Bob", score: 100 },
+      { name: "Charlie", score: 90 },
+    ]
+  );
+
+  testFunc(
+    normalizeStringLengths,
+    ["cat    ", "elephant", "dog    "],
+    ["cat", "elephant", "dog"]
+  );
+
+  testFunc(centerJustifyStrings, ["  a  ", " abc ", "abcdef"], ["a", "abc", "abcdef"]);
+
+  testFunc(
+    centerJustifyStrings,
+    ["  cat   ", "elephant", "  dog   "],
+    ["cat", "elephant", "dog"]
+  );
+
+  testFunc(scaleToMax100, [25, 62.5, 100], [20, 50, 80]);
+
+  //testFunc(differencesFromMean, [-1, 0, 1], [1, 2, 3]);
+  testFunc(differencesFromMean, [-10, 0, 10], [10, 20, 30]);
+
+  testFunc(
+    stringFrequencies,
+    [3, 2, 3, 3, 2],
+    ["apple", "banana", "apple", "apple", "banana"]
+  );
+
+  testFunc(markLargestNumber, [false, true, false], [1, 2, 1]);
+  testFunc(markLargestNumber, [false, true, false, false], [1, 3, 2, 0]);
+
 }
 
 function testReduceFunctions() {}
