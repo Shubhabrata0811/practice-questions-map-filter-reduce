@@ -724,7 +724,7 @@ function testMapFunctions() {
 
   testFunc(
     normalizeStringLengths,
-    ["cat    ", "elephant", "dog    "],
+    ["cat     ", "elephant", "dog     "],
     ["cat", "elephant", "dog"]
   );
 

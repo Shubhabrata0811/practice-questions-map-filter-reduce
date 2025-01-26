@@ -254,7 +254,8 @@ const percentageContributions = (numbers) =>
   );
 
 // subtract the smallest number from each number in [3, 8, 1] => [2, 7, 0]
-const subtractMin = (numbers) => numbers.map((num, idx, arr) => num - Math.min(...arr));
+const subtractMin = (numbers) =>
+  numbers.map((num, idx, arr) => num - Math.min(...arr));
 
 // calculate ranks (1-based, descending) for scores in [{ name: "Alice", score: 80 }, { name: "Bob", score: 100 }, { name: "Charlie", score: 90 }] => [3, 1, 2]
 const calculateRanks = function (objects) {
@@ -266,7 +267,13 @@ const calculateRanks = function (objects) {
 
 // normalize strings by the longest string length in ["cat", "elephant", "dog"] => ["cat    ", "elephant", "dog    "]
 // (pad with spaces to match the longest length)
-const normalizeStringLengths = function (strings) {};
+const normalizeString = (length, normalizingChar) => (str) =>
+  str +
+  normalizingChar.repeat(length - str.length < 0 ? 0 : length - str.length);
+
+const normalizeStringLengths = function (strings) {
+  return strings.map(normalizeString(Math.max(...strings.map((str) => str.length)), " "));
+};
 
 // normalize strings by centering them based on the longest string length in ["cat", "elephant", "dog"] => ["  cat   ", "elephant", "  dog   "]
 // (pad with spaces to justify to the center)
